@@ -5,7 +5,7 @@ class Operational_DB:
         self.conn = self.Initialize_the_check_database()
 
     def Initialize_the_check_database(self):
-        db_name = 'Lazys.db'
+        db_name = 'Nscan.db'
         conn = sqlite3.connect(db_name)
         return conn
     
