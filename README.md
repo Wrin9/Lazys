@@ -1,6 +1,7 @@
+# 2023.10.10
 config.yaml里面设置quake的key
 
->python app.py -h
+python app.py -h
 usage: app.py [-h] [--mode MODE] [--search SEARCH] [--start START] [--end END]
 
 options:
