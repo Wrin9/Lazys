@@ -11,3 +11,5 @@ options:
   --end END        End, default 10
 
 例子：python app.py --mode="Quake" --search=app:"用友-UFIDA-NC财务系统" --start=0 --end=100
+
+数据将会存储在当前目录下的Nscan.db中
