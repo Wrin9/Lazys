@@ -32,7 +32,8 @@ class WebsiteValidator:
             except asyncio.TimeoutError:
                 print(f"{Fore.YELLOW}[!]{Fore.RESET}{url} HTTP validation timed out. Skipping...")
                 return None
-            except aiohttp.ClientError:
+            except Exception as e:
+                print(f"{Fore.YELLOW}[!]{Fore.RESET}{url} HTTP validation timed out. Skipping...")
                 pass
 
             try:
@@ -55,7 +56,8 @@ class WebsiteValidator:
                         else:
                             print(f"{Fore.RED}[-]{Fore.RESET}{url} is accessible via HTTPS. Title not found.")
                     return status_code, url
-            except aiohttp.ClientError:
+            except Exception as e:
+                print(f"{Fore.YELLOW}[!]{Fore.RESET}{url} HTTPS validation timed out. Skipping...")
                 pass
 
     async def validate_urls(self):
